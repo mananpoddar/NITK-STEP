@@ -57,20 +57,24 @@
   <section class="blog-post-area section-margin mt-4">
     <div class="container">
      {% for ob in obj %}
-            <div class="column">
-    
+     <div class="column">
+              
                     <div class="post-module">
-                      <div class="thumbnail">
+                        <div class="thumbnail">
                         <img src="{% get_media_prefix %}{{ ob.image }}"/>
                       </div>
+                 
                       <!-- Post Content-->
+                      <a href="/step/details/{{ob.id}}">       
                       <div class="post-content">
-                      
-                        <h1 class="title">{{ ob.title }}</h1>
-                        <p class="description">{{ ob.description }}</p>
+                      <h1 class="title">{{ ob.title }}</h1>
+                      <p class="description">{{ ob.description }}</p>
                       </div>
+                      </a>
                     </div>
-                  </div>{% endfor %}
+                  </div>
+               
+                  {% endfor %}
                   
                   
                 </div></section>

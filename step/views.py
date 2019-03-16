@@ -29,4 +29,8 @@ def comingevents(request):
     context = {'obj': obj}
     return render(request, 'step/info.html', context)
 
+def details(request,ide):
+    obj = govtProjects.objects.filter(id = ide)
+    context = {'obj':obj}
+    return render(request,'step/details.html',context)
 
