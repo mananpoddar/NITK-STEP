@@ -14,19 +14,19 @@ def frontPage(request):
 
 def gov_projects(request):
     obj = govtProjects.objects.all()
-    context = {'obj': obj}
+    context = {'obj': obj,'type':"Government Projects"}
     return render(request, 'step/info.html', context)
 
 
 def ongoing(request):
     obj = ongoingProgrammes.objects.all()
-    context = {'obj': obj}
+    context = {'obj': obj,'type':"Ongoing Programmes"}
     return render(request, 'step/info.html', context)
 
 
 def comingevents(request):
     obj = comingEvents.objects.all()
-    context = {'obj': obj}
+    context = {'obj': obj,'type':"Coming Events"}
     return render(request, 'step/info.html', context)
 
 def details(request,ide):

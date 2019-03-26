@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ title }}</title>
+  <title>NITK &mdash; STEP</title>
 
   <script src="//use.typekit.net/xyl8bgh.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
@@ -15,62 +15,170 @@
   <link rel='stylesheet prefetch' href="{% static 'step/css/__codepen_io_andytran_pen.css' %}">
   
         <link rel="stylesheet" href="{% static 'step/css/style.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
 
+        <link rel="stylesheet" href="{% static 'step/th/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'step/th/css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'step/th/css/owl.carousel.min.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'step/th/fonts/ionicons/css/ionicons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'step/th/fonts/fontawesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'step/th/fonts/flaticon/font/flaticon.css' %}">
+    
+        <!-- Theme Style -->
+        <link rel="stylesheet" href="{% static 'step/th/css/style.css' %}">
 
-	<link rel="icon" href="{% static 'step/second/img/Fevicon.png' %}" type="image/png">
+	
+  <style>
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-  <link rel="stylesheet" href="{% static 'step/second/vendors/bootstrap/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'step/second/vendors/fontawesome/css/all.min.css' %}">
-  <link rel="stylesheet" href="{% static 'step/second/vendors/themify-icons/themify-icons.css' %}">
-  <link rel="stylesheet" href="{% static 'step/second/vendors/linericon/style.css' %}">
-  <link rel="stylesheet" href="{% static 'step/second/vendors/owl-carousel/owl.theme.default.min.css' %}">
-  <link rel="stylesheet" href="{% static 'step/second/vendors/owl-carousel/owl.carousel.min.css' %}">
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
 
-  <link rel="stylesheet" href="{% static 'step/second/css/style.css' %}">
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: rgb(245, 9, 9);
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+  </style>
+  <script>
+    function function2(p1) {
+      var modal=document.getElementById(p1);
+      modal.style.display = "block";
+    }
+    function function3(p1) {
+      var modal=document.getElementById(p1);
+      modal.style.display = "none";
+    }
+    </script>
 </head>
 <body>
   <!--================Header Menu Area =================-->
-  <header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container box_1620">
-          <!-- Brand and toggle get grouped for better mobile display -->
-         
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item active"><a class="nav-link" href="#">Home</a></li> 
-              <li class="nav-item"><a class="nav-link" href="#">About Us</a></li> 
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a>
-            </ul>
-          </div> 
-        </div>
-      </nav>
-    </div>
+  <header role="banner">
+      <nav class="navbar navbar-expand-md  navbar-light bg-light">
+          <div class="container">
+            
+           
+            <div class="collapse navbar-collapse" id="navbarMenu">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+        <div class="container logo-wrap">
+            <div class="row pt-5">
+              <div class="col-12 text-center">
+                <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+                <h1 class="mb-4><a href="#">{{ type }}</a></h1>
+              </div>
+            </div>
+          </div>
+
   </header>
   <!--================Header Menu Area =================-->
   <section class="blog-post-area section-margin mt-4">
     <div class="container">
      {% for ob in obj %}
+     <div id="{{ ob.id }}" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h2>Details of Project</h2>
+          <span class="close" onclick="function3({{ ob.id }})">&times;</span>
+          
+        </div>
+        <div class="modal-body">
+          <p> {{ ob.details }}</p>
+        </div>
+        
+      </div>
+    
+    </div>
      <div class="column">
               
-                    <div class="post-module">
+                    <div class="post-module" onclick="function2({{ ob.id }})">
                         <div class="thumbnail">
-                        <img src="{% get_media_prefix %}{{ ob.image }}"/>
+                          <img src="{% get_media_prefix %}{{ ob.image }}"/>
                       </div>
                  
                       <!-- Post Content-->
-                      <a href="/step/details/{{ob.id}}">       
+                      
                       <div class="post-content">
                       <h1 class="title">{{ ob.title }}</h1>
                       <p class="description">{{ ob.description }}</p>
                       </div>
-                      </a>
+                    
                     </div>
                   </div>
                
@@ -81,15 +189,63 @@
   
     <!--================ Blog slider end =================-->  
 
- 
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-4">
+              <h3>Vision</h3>
+              
+  
+              <p>Entrepreneurship Development through Business Incubation, Innovation, Training, and Skill enhancement in a value driven, and service focused environment-targeting benefits to all the participating agencies</p>
+            </div>
+            <div class="col-md-6 ml-auto">
+              <div class="row">
+                
+                <div class="col-md-6"></div>
+                
+                <div class="col-md-4">
+  
+                  <div class="mb-5">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Contact</a></li>
+                      <li><a href="#">Government Projects</a></li>
+                      <li><a href="#">Ongoing Programmes</a></li>
+                      <li><a href="#">Upcoming Events</a></li>
+                    </ul>
+                  </div>
+                  
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END footer -->
+      
+      <!-- loader -->
+      <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+  
 
-  <script src="{% static 'step/second/vendors/jquery/jquery-3.2.1.min.js' %}"></script>
-  <script src="{% static 'step/second/vendors/bootstrap/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'step/second/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'step/second/js/jquery.ajaxchimp.min.js' %}"></script>
-  <script src="{% static 'step/second/js/mail-script.js' %}"></script>
-  <script src="{% static 'step/second/js/main.js' %}"></script>
+    <script src="{% static 'step/th/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'step/th/js/jquery-migrate-3.0.0.js' %}"></script>
+    <script src="{% static 'step/th/js/popper.min.js' %}"></script>
+    <script src="{% static 'step/th/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'step/th/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'step/th/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'step/th/js/jquery.stellar.min.js' %}"></script>
 
+    
+    <script src="{% static 'step/th/js/main.js' %}"></script>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="{% static 'step/js/index.js' %}"></script>
